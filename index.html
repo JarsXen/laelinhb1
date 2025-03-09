@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Laeli Nur Habibah</title>
+    <title>Website Laeli</title>
     <style>
         * {
             margin: 0;
@@ -20,23 +20,21 @@
         }
 
         .container {
-            width: 100%;
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 15px;
+            padding: 0 20px;
         }
 
-        /* Header Styles - Mobile Optimized */
+        /* Header Styles */
         header {
-            padding: 15px 0;
+            padding: 20px 0;
             display: flex;
-            flex-direction: column;
+            justify-content: space-between;
             align-items: center;
-            gap: 15px;
         }
 
         .logo {
-            font-size: 24px;
+            font-size: 28px;
             font-weight: bold;
             background: linear-gradient(to right, #ff6b9d, #ff8eb2);
             -webkit-background-clip: text;
@@ -57,9 +55,7 @@
         nav ul {
             display: flex;
             list-style: none;
-            gap: 20px;
-            flex-wrap: wrap;
-            justify-content: center;
+            gap: 30px;
         }
 
         nav a {
@@ -68,8 +64,6 @@
             font-weight: 500;
             transition: color 0.3s;
             position: relative;
-            font-size: 16px;
-            padding: 8px 5px;
         }
 
         nav a::after {
@@ -77,7 +71,7 @@
             position: absolute;
             width: 0;
             height: 2px;
-            bottom: -2px;
+            bottom: -5px;
             left: 0;
             background: #ff6b9d;
             transition: width 0.3s;
@@ -91,26 +85,24 @@
             width: 100%;
         }
 
-        /* Hero Section - Mobile Optimized */
+        /* Hero Section */
         .hero {
             display: flex;
-            flex-direction: column;
             align-items: center;
-            padding: 40px 0;
+            justify-content: space-between;
+            padding: 80px 0;
             position: relative;
             overflow: hidden;
-            text-align: center;
         }
 
         .hero-content {
-            width: 100%;
+            width: 50%;
             z-index: 2;
-            margin-bottom: 30px;
         }
 
         .hero h1 {
-            font-size: 32px;
-            margin-bottom: 15px;
+            font-size: 48px;
+            margin-bottom: 20px;
             line-height: 1.2;
             position: relative;
             z-index: 1;
@@ -122,16 +114,15 @@
         }
 
         .hero p {
-            font-size: 16px;
-            margin-bottom: 25px;
+            font-size: 18px;
+            margin-bottom: 30px;
             line-height: 1.6;
             color: #555;
-            max-width: 100%;
+            max-width: 90%;
         }
 
         .hero-image {
-            width: 100%;
-            max-width: 350px;
+            width: 50%;
             position: relative;
             z-index: 1;
             perspective: 1000px;
@@ -139,10 +130,14 @@
 
         .hero-image img {
             width: 100%;
-            transform: rotateY(0) rotateX(0);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            transform: rotateY(-15deg) rotateX(5deg);
+            box-shadow: 30px 30px 60px rgba(0, 0, 0, 0.1);
             border-radius: 10px;
             transition: transform 0.5s;
+        }
+
+        .hero-image:hover img {
+            transform: rotateY(0) rotateX(0);
         }
 
         /* 3D Background Elements */
@@ -150,22 +145,22 @@
             position: absolute;
             border-radius: 50%;
             background: linear-gradient(45deg, rgba(255, 107, 157, 0.2), rgba(255, 142, 178, 0.1));
-            filter: blur(40px);
+            filter: blur(60px);
             z-index: 0;
         }
 
         .bg-element-1 {
-            width: 200px;
-            height: 200px;
-            top: -100px;
-            left: -50px;
+            width: 300px;
+            height: 300px;
+            top: -150px;
+            left: -100px;
             animation: float 8s infinite alternate;
         }
 
         .bg-element-2 {
-            width: 150px;
-            height: 150px;
-            bottom: 50px;
+            width: 200px;
+            height: 200px;
+            bottom: 100px;
             right: -50px;
             animation: float 6s infinite alternate-reverse;
         }
@@ -175,19 +170,19 @@
                 transform: translate(0, 0);
             }
             100% {
-                transform: translate(15px, 15px);
+                transform: translate(20px, 20px);
             }
         }
 
-        /* Options Section - Mobile Optimized */
+        /* Options Section */
         .options {
-            padding: 40px 0;
+            padding: 80px 0;
             text-align: center;
         }
 
         .options h2 {
-            font-size: 28px;
-            margin-bottom: 40px;
+            font-size: 36px;
+            margin-bottom: 60px;
             position: relative;
             display: inline-block;
             color: #333;
@@ -196,30 +191,28 @@
         .options h2::after {
             content: '';
             position: absolute;
-            width: 60px;
+            width: 80px;
             height: 3px;
             background: linear-gradient(to right, #ff6b9d, #ff8eb2);
-            bottom: -10px;
+            bottom: -15px;
             left: 50%;
             transform: translateX(-50%);
         }
 
         .options-container {
             display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 25px;
+            justify-content: center;
+            gap: 40px;
+            perspective: 1000px;
         }
 
         .option-card {
-            width: 100%;
-            max-width: 330px;
-            height: auto;
-            min-height: 350px;
+            width: 300px;
+            height: 400px;
             background: rgba(255, 255, 255, 0.7);
             backdrop-filter: blur(10px);
             border-radius: 20px;
-            padding: 25px 20px;
+            padding: 30px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -227,36 +220,56 @@
             text-align: center;
             position: relative;
             overflow: hidden;
-            transition: transform 0.4s, box-shadow 0.4s;
+            transition: transform 0.5s, box-shadow 0.5s;
+            transform-style: preserve-3d;
         }
 
-        .option-card:active {
-            transform: scale(0.98);
+        .option-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: 0.5s;
+        }
+
+        .option-card:hover {
+            transform: translateY(-10px) rotateX(5deg) rotateY(5deg);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
+        }
+
+        .option-card:hover::before {
+            left: 100%;
         }
 
         .option-icon {
-            width: 70px;
-            height: 70px;
+            width: 80px;
+            height: 80px;
             background: linear-gradient(135deg, #ff6b9d, #ff8eb2);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 15px;
-            font-size: 28px;
+            margin-bottom: 20px;
+            font-size: 32px;
             color: white;
+            transform: translateZ(30px);
         }
 
         .option-card h3 {
-            font-size: 22px;
-            margin-bottom: 12px;
+            font-size: 24px;
+            margin-bottom: 15px;
             color: #333;
+            transform: translateZ(20px);
         }
 
         .option-card p {
-            font-size: 15px;
+            font-size: 16px;
             color: #555;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
+            transform: translateZ(15px);
         }
 
         .btn {
@@ -270,84 +283,100 @@
             transition: transform 0.3s, box-shadow 0.3s;
             text-decoration: none;
             display: inline-block;
-            font-size: 16px;
+            transform: translateZ(25px);
         }
 
-        .btn:hover, .btn:active {
-            transform: scale(1.05);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        .btn:hover {
+            transform: translateZ(25px) scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
         }
 
-        /* Features Section - Mobile Optimized */
+        /* Features Section */
         .features {
-            padding: 40px 0;
+            padding: 80px 0;
             background: rgba(255, 255, 255, 0.3);
         }
 
         .features h2 {
             text-align: center;
-            font-size: 28px;
-            margin-bottom: 40px;
+            font-size: 36px;
+            margin-bottom: 60px;
             color: #333;
         }
 
         .features-grid {
             display: grid;
-            grid-template-columns: 1fr;
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
         }
 
         .feature-item {
             background: rgba(255, 255, 255, 0.7);
             border-radius: 15px;
-            padding: 25px 20px;
+            padding: 30px;
             transition: transform 0.3s;
+            text-align: center;
         }
 
-        .feature-item:active {
-            transform: scale(0.98);
+        .feature-item:hover {
+            transform: translateY(-10px);
         }
 
         .feature-icon {
-            font-size: 36px;
-            margin-bottom: 15px;
+            font-size: 40px;
+            margin-bottom: 20px;
             background: linear-gradient(to right, #ff6b9d, #ff8eb2);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            display: block;
-            text-align: center;
         }
 
         .feature-item h3 {
-            font-size: 20px;
-            margin-bottom: 10px;
+            font-size: 22px;
+            margin-bottom: 15px;
             color: #333;
-            text-align: center;
         }
 
         .feature-item p {
             color: #555;
-            line-height: 1.5;
-            font-size: 15px;
-            text-align: center;
+            line-height: 1.6;
+            margin-bottom: 20px;
         }
 
-        /* Footer - Mobile Optimized */
+        .social-btn {
+            background: linear-gradient(to right, #ff6b9d, #ff8eb2);
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 30px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .social-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Footer */
         footer {
             background: rgba(255, 107, 157, 0.1);
-            padding: 30px 0;
+            padding: 40px 0;
             text-align: center;
         }
 
         .footer-content {
             display: flex;
-            flex-direction: column;
+            justify-content: space-between;
             align-items: center;
+            flex-wrap: wrap;
             gap: 20px;
         }
 
         .footer-logo {
-            font-size: 22px;
+            font-size: 24px;
             font-weight: bold;
             background: linear-gradient(to right, #ff6b9d, #ff8eb2);
             -webkit-background-clip: text;
@@ -356,17 +385,13 @@
 
         .footer-links {
             display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 15px;
+            gap: 20px;
         }
 
         .footer-links a {
             color: #555;
             text-decoration: none;
             transition: color 0.3s;
-            padding: 5px;
-            font-size: 15px;
         }
 
         .footer-links a:hover {
@@ -375,60 +400,57 @@
 
         .copyright {
             width: 100%;
-            margin-top: 15px;
+            margin-top: 20px;
             color: #777;
-            font-size: 14px;
         }
 
-        /* Mobile Touch Target Improvements */
-        button, a {
-            min-height: 44px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        /* Responsive Adjustments */
-        @media (min-width: 768px) {
-            header {
-                flex-direction: row;
-                justify-content: space-between;
-                padding: 20px 0;
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                padding: 40px 0;
             }
 
-            .hero {
-                flex-direction: row;
-                text-align: left;
-                padding: 60px 0;
+            .hero-content, .hero-image {
+                width: 100%;
             }
 
             .hero-content {
-                width: 50%;
-                margin-bottom: 0;
+                margin-bottom: 40px;
             }
 
-            .hero-image {
-                width: 45%;
-            }
-
-            .hero h1 {
-                font-size: 40px;
+            .hero p {
+                max-width: 100%;
             }
 
             .options-container {
-                flex-direction: row;
-                justify-content: center;
-                gap: 30px;
+                flex-direction: column;
+                align-items: center;
             }
 
-            .features-grid {
-                grid-template-columns: repeat(2, 1fr);
+            .option-card {
+                width: 100%;
+                max-width: 350px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 20px;
             }
 
-            .footer-content {
-                flex-direction: row;
-                justify-content: space-between;
-                flex-wrap: wrap;
+            nav ul {
+                gap: 15px;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero p {
+                font-size: 16px;
             }
         }
     </style>
@@ -439,12 +461,12 @@
 
     <div class="container">
         <header>
-            <div class="logo">Laeli Nur Habibah<div>
+            <div class="logo">Laeli Nur Habibah</div>
             <nav>
                 <ul>
                     <li><a href="#home">Beranda</a></li>
-                    <li><a href="#options">Opsi</a></li>
-                    <li><a href="#features">Fitur</a></li>
+                    <li><a href="#options">Jasa</a></li>
+                    <li><a href="#features">Sosial Media</a></li>
                     <li><a href="#contact">Kontak</a></li>
                 </ul>
             </nav>
@@ -452,59 +474,42 @@
 
         <section id="home" class="hero">
             <div class="hero-content">
-                <h1>Solusi <span>Desain</span> untuk Anda</h1>
-                <p>Kami menyediakan Desain terbaik yang dirancang khusus untuk memenuhi kebutuhan bisnis Anda dengan teknologi mutakhir.</p>
-                <a href="#options" class="btn">Jelajahi Opsi</a>
+                <h1>Desain <span>Canva</span> Profesional</h1>
+                <p>Saya menyediakan jasa desain Canva berkualitas tinggi untuk kebutuhan personal maupun bisnis Anda. Buat desain yang menarik dan profesional dengan bantuan saya.</p>
+                <a href="#options" class="btn">Lihat Layanan</a>
             </div>
             <div class="hero-image">
-                <img src="/api/placeholder/350/250" alt="Modern Design Solution">
+                <img src="/api/placeholder/600/400" alt="Desain Canva">
             </div>
         </section>
 
         <section id="options" class="options">
-            <h2>Pilih Opsi Anda</h2>
+            <h2>Jasa Desain Canva</h2>
             <div class="options-container">
                 <div class="option-card">
-                    <div class="option-icon">1</div>
-                    <h3>Paket 1</h3>
-                    <p>Lalaaa Sayang Fajarr.</p>
-                    <a href="https://lynk.id/laeliinhb" class="btn" id="option1Link">Pesan Sekarang</a>
-                </div>
-                
-                <div class="option-card">
-                    <div class="option-icon">2</div>
-                    <h3>Paket 2</h3>
-                    <p>Fajarr Sayangg Lalaaa</p>
-                    <a href="https://lynk.id/laeliinhb" class="btn" id="option2Link">Pesan Sekarang</a>
+                    <div class="option-icon">🎨</div>
+                    <h3>Jasa Desain Canva Premium</h3>
+                    <p>Dapatkan desain Canva berkualitas tinggi untuk berbagai kebutuhan seperti feed Instagram, poster, brosur, banner, presentasi, dan lainnya. Semua desain dibuat dengan profesional sesuai dengan kebutuhan Anda.</p>
+                    <a href="https://lynk.id/laeliinhb" class="btn" id="optionLink">Pesan Sekarang</a>
                 </div>
             </div>
         </section>
 
         <section id="features" class="features">
-            <h2>Fitur Unggulan</h2>
+            <h2>Sosial Media</h2>
             <div class="features-grid">
                 <div class="feature-item">
-                    <div class="feature-icon">🚀</div>
-                    <h3>Teks</h3>
-                    <p>Teks Teks TekTeks Teks Teks Teks Teks Teks Teks Teks Teks Teks Teks.</p>
-                </div>
-                
-                <div class="feature-item">
-                    <div class="feature-icon">🔒</div>
-                    <h3>Teks 1</h3>
-                    <p>Teks Teks TekTeks Teks Teks.</p>
-                </div>
-                
-                <div class="feature-item">
                     <div class="feature-icon">📱</div>
-                    <h3>Teks 2</h3>
-                    <p>Tampilan yang sempurna di semua ukuran layar, dari desktop hingga smartphone.</p>
+                    <h3>Instagram</h3>
+                    <p>Ikuti saya di Instagram untuk melihat portfolio dan update terbaru tentang layanan desain Canva yang saya tawarkan.</p>
+                    <a href="https://www.instagram.com/llaurlv" class="social-btn" id="instagramLink">Follow Instagram</a>
                 </div>
                 
                 <div class="feature-item">
-                    <div class="feature-icon">💼</div>
-                    <h3>Desain Profesional</h3>
-                    <p>Teks Teks TekTeks Teks Teks Teks Teks Teks Teks Teks Teks.</p>
+                    <div class="feature-icon">🎵</div>
+                    <h3>TikTok</h3>
+                    <p>Kunjungi TikTok saya untuk melihat tutorial desain, tips kreatif, dan contoh-contoh desain menarik yang bisa Anda dapatkan.</p>
+                    <a href="https://www.tiktok.com/@lalasza_" class="social-btn" id="tiktokLink">Follow TikTok</a>
                 </div>
             </div>
         </section>
@@ -516,8 +521,8 @@
                 <div class="footer-logo">Laeli Nur Habibah</div>
                 <div class="footer-links">
                     <a href="#home">Beranda</a>
-                    <a href="#options">Opsi</a>
-                    <a href="#features">Fitur</a>
+                    <a href="#options">Jasa</a>
+                    <a href="#features">Sosial Media</a>
                     <a href="#contact">Kontak</a>
                 </div>
                 <div class="copyright">
@@ -528,6 +533,27 @@
     </footer>
 
     <script>
+        // 3D effect for option cards
+        document.querySelectorAll('.option-card').forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                
+                const angleX = (y - centerY) / 20;
+                const angleY = (centerX - x) / 20;
+                
+                card.style.transform = `perspective(1000px) rotateX(${angleX}deg) rotateY(${angleY}deg) translateZ(10px)`;
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateZ(0)';
+            });
+        });
+
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
@@ -543,21 +569,8 @@
             });
         });
 
-        // Interactive button hover/touch effect
-        document.querySelectorAll('.btn').forEach(btn => {
-            // For mobile devices - touch effect
-            btn.addEventListener('touchstart', () => {
-                btn.style.transform = 'scale(0.98)';
-            });
-            
-            btn.addEventListener('touchend', () => {
-                btn.style.transform = 'scale(1)';
-                setTimeout(() => {
-                    btn.style.background = 'linear-gradient(to right, #ff6b9d, #ff8eb2)';
-                }, 300);
-            });
-            
-            // For desktop - hover effect
+        // Interactive button hover effect
+        document.querySelectorAll('.btn, .social-btn').forEach(btn => {
             btn.addEventListener('mousemove', (e) => {
                 const rect = btn.getBoundingClientRect();
                 const x = e.clientX - rect.left;
@@ -571,66 +584,56 @@
             });
         });
 
-        // Link interactions
-        document.getElementById('option1Link').addEventListener('click', function() {
-            console.log('Option 1 selected - redirecting to Lynk order page');
+        // Link interactions with analytics tracking simulation
+        document.getElementById('optionLink').addEventListener('click', function() {
+            console.log('Jasa Desain Canva selected - redirecting to Lynk order page');
+            // You can add actual analytics tracking here
         });
 
-        document.getElementById('option2Link').addEventListener('click', function() {
-            console.log('Option 2 selected - redirecting to Lynk order page');
+        document.getElementById('instagramLink').addEventListener('click', function() {
+            console.log('Instagram profile link clicked');
+            // You can add actual analytics tracking here
         });
 
-        // Animation on scroll - simplified for better mobile performance
-        const animateOnScroll = () => {
+        document.getElementById('tiktokLink').addEventListener('click', function() {
+            console.log('TikTok profile link clicked');
+            // You can add actual analytics tracking here
+        });
+
+        // Animation on scroll
+        window.addEventListener('scroll', () => {
             const sections = document.querySelectorAll('section');
             
             sections.forEach(section => {
                 const sectionTop = section.getBoundingClientRect().top;
                 const windowHeight = window.innerHeight;
                 
-                if (sectionTop < windowHeight * 0.8) {
+                if (sectionTop < windowHeight * 0.75) {
                     section.style.opacity = '1';
                     section.style.transform = 'translateY(0)';
                 }
             });
-        };
+        });
 
         // Initialize animations
         document.querySelectorAll('section').forEach(section => {
             section.style.opacity = '0';
             section.style.transform = 'translateY(20px)';
-            section.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+            section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
         });
 
         // Trigger initial animation
-        setTimeout(animateOnScroll, 100);
-        
-        // Add scroll event with throttling for better performance
-        let scrollTimeout;
-        window.addEventListener('scroll', () => {
-            if (!scrollTimeout) {
-                scrollTimeout = setTimeout(() => {
-                    animateOnScroll();
-                    scrollTimeout = null;
-                }, 100);
-            }
-        });
-
-        // Detect if user is on mobile and simplify animations if needed
-        const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-        
-        if (isMobile) {
-            // Remove 3D effects that might be heavy on mobile
-            document.querySelectorAll('.option-card').forEach(card => {
-                card.style.transform = 'none';
-                card.style.transformStyle = 'flat';
+        setTimeout(() => {
+            document.querySelectorAll('section').forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                
+                if (sectionTop < windowHeight) {
+                    section.style.opacity = '1';
+                    section.style.transform = 'translateY(0)';
+                }
             });
-            
-            // Reduce animation complexity
-            document.querySelectorAll('.bg-element').forEach(el => {
-                el.style.animationDuration = '20s';
-            });
-        }
+        }, 100);
     </script>
 </body>
 </html>
