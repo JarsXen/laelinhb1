@@ -1,57 +1,74 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maintenance</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-body {
-  height: 100vh;
-  background: linear-gradient(135deg, #667eea, #764ba2);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: 'Poppins', sans-serif;
-  color: #fff;
-  text-align: center;
-  padding: 20px;
-}
+    body {
+      height: 100vh;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Poppins', sans-serif;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
 
-.container {
-  max-width: 600px;
-  background: rgba(255, 255, 255, 0.1);
-  padding: 40px;
-  border-radius: 20px;
-  backdrop-filter: blur(10px);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
-  animation: fadeIn 1s ease-in-out;
-}
+    .container {
+      max-width: 600px;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 40px;
+      border-radius: 20px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+      animation: fadeIn 1s ease forwards;
+    }
 
-h1 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-}
+    h1 {
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
 
-p {
-  font-size: 1.1rem;
-  margin-bottom: 15px;
-}
+    p {
+      font-size: 1.2em;
+      margin-bottom: 10px;
+    }
 
-.loader {
-  margin: 30px auto 0;
-  border: 6px solid rgba(255, 255, 255, 0.3);
-  border-top: 6px solid #fff;
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  animation: spin 1s linear infinite;
-}
+    .loader {
+      margin: 30px auto 0;
+      border: 6px solid rgba(255, 255, 255, 0.3);
+      border-top: 6px solid #fff;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      animation: spin 1s linear infinite;
+    }
 
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🚧 Website Sedang Dalam Maintenance 🚧</h1>
+    <p>Kami sedang memperbarui tampilan agar lebih keren untuk Anda.</p>
+    <p>Mohon tunggu sebentar ya... 🔧</p>
+    <div class="loader"></div>
+  </div>
+</body>
+</html>
