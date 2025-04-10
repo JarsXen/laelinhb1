@@ -15,38 +15,53 @@
       height: 100vh;
       background: linear-gradient(270deg, #8e2de2, #4a00e0, #00c6ff, #0072ff);
       background-size: 800% 800%;
-      animation: gradientMove 12s ease infinite;
+      animation: gradientMove 16s ease infinite;
       display: flex;
-      flex-direction: column;
       justify-content: center;
       align-items: center;
+      flex-direction: column;
       font-family: 'Poppins', sans-serif;
-      color: #ffffff;
+      color: #fff;
       text-align: center;
-      overflow: hidden;
       padding: 20px;
+      overflow: hidden;
+    }
+
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
     }
 
     .container {
-      background: rgba(255, 255, 255, 0.1);
-      padding: 50px 30px;
+      background: rgba(255, 255, 255, 0.08);
+      padding: 60px 40px;
       border-radius: 20px;
-      backdrop-filter: blur(15px);
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
-      animation: fadeIn 2s ease forwards;
-      max-width: 600px;
-      width: 90%;
+      backdrop-filter: blur(20px);
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+      animation: fadeSlide 1.5s ease-out forwards;
+    }
+
+    @keyframes fadeSlide {
+      0% {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     h1 {
-      font-size: 2.5em;
+      font-size: 2.8em;
       margin-bottom: 20px;
       animation: fadeText 2s ease forwards;
     }
 
     p {
       font-size: 1.2em;
-      margin-bottom: 10px;
+      margin-bottom: 20px;
       opacity: 0;
       animation: fadeText 2s ease forwards;
       animation-delay: 0.5s;
@@ -54,47 +69,38 @@
     }
 
     .loader {
-      margin: 30px auto;
-      width: 60px;
-      height: 60px;
+      margin: 30px auto 20px;
+      width: 80px;
+      height: 80px;
       border-radius: 50%;
-      background: radial-gradient(circle, #ffffff 20%, transparent 20%), radial-gradient(circle, transparent 20%, #ffffff 20%, transparent 30%), radial-gradient(circle, #ffffff 20%, transparent 20%), radial-gradient(circle, transparent 20%, #ffffff 20%, transparent 30%);
-      background-position: 0 0, 0 30px, 30px -30px, -30px 0px;
-      background-size: 30px 30px;
-      background-repeat: no-repeat;
-      animation: pulse 1.5s infinite linear;
+      background: linear-gradient(45deg, #00c6ff, #0072ff, #8e2de2, #4a00e0);
+      background-size: 400% 400%;
+      animation: spin 2s linear infinite, pulse 1.5s ease-in-out infinite;
+      box-shadow: 0 0 20px #00c6ff, 0 0 30px #8e2de2, 0 0 40px #4a00e0;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.1); }
     }
 
     .footer {
-      margin-top: 20px;
+      margin-top: 30px;
       font-size: 0.9em;
-      color: #d1d1d1;
+      opacity: 0.7;
       animation: fadeText 2s ease forwards;
       animation-delay: 1s;
       animation-fill-mode: forwards;
     }
 
-    /* Animations */
-    @keyframes gradientMove {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-
-    @keyframes fadeIn {
-      0% { opacity: 0; transform: scale(0.9); }
-      100% { opacity: 1; transform: scale(1); }
-    }
-
     @keyframes fadeText {
-      0% { opacity: 0; transform: translateY(20px); }
-      100% { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes pulse {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.1); }
-      100% { transform: scale(1); }
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
@@ -102,10 +108,9 @@
   <div class="container">
     <h1>🚧 Website Sedang Maintenance 🚧</h1>
     <p>Kami sedang memperbarui tampilan agar lebih keren untuk Anda.</p>
-    <p>Mohon tunggu sebentar ya... 🔧</p>
     <div class="loader"></div>
     <div class="footer">
-      Salam hangat dari Tim IT Fajar Irwansah ✨
+      Salam hangat dari Tim IT <strong>Fajar Irwansah</strong> 🌟
     </div>
   </div>
 </body>
